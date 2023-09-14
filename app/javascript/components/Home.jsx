@@ -14,7 +14,16 @@ const Welcome = () => {
         <Appbar />
       
       <Row>
-      <Col sm={8}><Mainpage /></Col>
+      <Col sm={8}><Mainpage />
+      <Link
+            to="/articles"
+            className="btn btn-primary"
+            role="button"
+          >
+            View Article
+          </Link>
+      
+      </Col>
       <Col sm={4}><Sidebar /></Col>
     </Row>
     </Container>
