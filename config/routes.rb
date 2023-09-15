@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       post 'article/create'
       # get 'article/:id'
       get '/show/:id', to: 'articles#show'
+      get '/max_id/', to: 'articles#max_id'
       # delete '/destroy/:id', to: 'article#destroy'
     end
   end
