@@ -15,13 +15,32 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def show
-    # render json: @article
     if article
       render json: article
     else
       render json: article.errors
     end
   end
+
+  def max_id
+    max_id = Article.maximum(:id)
+    max_article = Article.find_by(id: max_id)
+
+    if max_article
+      render json: max_article
+    else
+      render json: { error: 'No articles found.' }, status: :not_found
+    end
+  end
+
+  # def max_id
+  #   if article
+  #     render json: article
+  #   else
+  #     render json: article.errors
+  #   end
+  # end
+
 
   def destroy
     @article&.destroy
@@ -41,4 +60,5 @@ class Api::V1::ArticlesController < ApplicationController
   def article
     @article ||= Article.find(params[:id])
   end
+
 end
