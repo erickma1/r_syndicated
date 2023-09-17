@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'articles/index'
+      get 'articles/news'
       post 'article/create'
-      # get 'article/:id'
       get '/show/:id', to: 'articles#show'
       get '/max_id/', to: 'articles#max_id'
       # delete '/destroy/:id', to: 'article#destroy'

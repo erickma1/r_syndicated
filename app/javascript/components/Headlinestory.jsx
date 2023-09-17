@@ -1,82 +1,62 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 
 const Headlinestory = () => {
-    const navigate = useNavigate();
-    const [articles, setArticles] = useState([]);
+  const params = useParams();
+  const navigate = useNavigate();
+  const [article, setArticle] = useState({ main_text: "" });
 
-    useEffect(() => {
-        const url = "/api/v1/articles/index";
-        fetch(url)
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            }
-            throw new Error("Network response was not ok.");
-          })
-          .then((res) => setArticles(res))
-          .catch(() => navigate("/"));
-      }, []);
+  useEffect(() => {
+    const url = "/api/v1/max_id/";
+    fetch(url)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Network response was not ok.");
+      })
+      .then((response) => setArticle(response))
+      .catch(() => navigate("/articles"));
+  }, [params.id]);
 
-      const allArticles = articles.map((articles, index) => (
-        <div key={index} className="col-md-6 col-lg-4">
-          <div className="card mb-4">
-            <img
-              src={articles.headline}
-              className="card-img-top"
-              alt={`${articles.headline} image`}
-            />
-            <div className="card-body">
-              <h5 className="card-title">{articles.headline}</h5>
-              <Link to={`/article/${articles.id}`} className="btn custom-button">
-                View Articles
-              </Link>
-            </div>
-          </div>
-        </div>
-      ));
-      const noArticles = (
-        <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
-          <h4>
-            No article yet. Why not <Link to="/new_article">create one</Link>
-          </h4>
-        </div>
-      );
-    
-      return (
-        <>
-          {/* <section className="jumbotron jumbotron-fluid text-center">
-            <div className="container py-5">
-              <h1 className="display-4">Articles for every occasion</h1>
-              <p className="lead text-muted">
-                We’ve pulled together our most popular article, our latest
-                additions, and our editor’s picks, so there’s sure to be something
-                tempting for you to try.
-              </p>
-            </div>
-          </section> */}
-          {/* <div className="py-5">
-            <main className="container">
-              <div className="text-end mb-3">
-                <Link to="/article" className="btn custom-button">
-                  Create New Article
-                </Link>
-              </div>
-              <div className="row">
-                {articles.length > 0 ? allArticles : noArticles}
-              </div>
-              <Link to="/" className="btn btn-link">
-                Home
-              </Link>
-            </main>
-          </div> */}
-           <div className="row">
-                {articles.length > 0 ? allArticles : noArticles}
-              </div>
-        </>
-        
-      );
-
+  const addHtmlEntities = (str) => {
+    return String(str).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
   };
-  
-  export default Headlinestory;
+
+  const articlemain_text = addHtmlEntities(article.main_text);
+
+  return (
+    <div className="">
+      <Card className="border-0">
+        {/* <Card.Header>News</Card.Header> */}
+        <Card.Body>
+        <Link
+        className="link-dark offset-2 link-offset-3-hover link-underline 
+         link-underline-opacity-0 link-underline-opacity-75-hover"
+        to={`/article/${article.id}`}
+      >
+        <h5 className="mb-2">{article.headline}</h5>
+      </Link>
+
+      <div className="float-left">
+        <img
+          src={article.image}
+          alt={`${article.headline} image`}
+          className="m-2 rounded float-start"
+        />
+        <div className="text-start">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${articlemain_text}`,
+            }}
+          />
+        </div>
+      </div>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+};
+
+export default Headlinestory;

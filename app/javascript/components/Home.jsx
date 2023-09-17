@@ -15,13 +15,13 @@ const Welcome = () => {
       
       <Row>
       <Col sm={8}><Mainpage />
-      <Link
+      {/* <Link
             to="/articles"
             className="btn btn-primary"
             role="button"
           >
             View Article
-          </Link>
+          </Link> */}
       
       </Col>
       <Col sm={4}><Sidebar /></Col>

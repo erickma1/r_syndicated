@@ -5,6 +5,11 @@ class Api::V1::ArticlesController < ApplicationController
     render json: article
   end
 
+  def news
+    articles = Article.where(section: 1).order(created_at: :desc).limit(5)
+    render json: articles
+  end
+
   def create
     article = Article.create!(article_params)
     if article
@@ -32,15 +37,6 @@ class Api::V1::ArticlesController < ApplicationController
       render json: { error: 'No articles found.' }, status: :not_found
     end
   end
-
-  # def max_id
-  #   if article
-  #     render json: article
-  #   else
-  #     render json: article.errors
-  #   end
-  # end
-
 
   def destroy
     @article&.destroy
