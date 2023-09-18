@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 
-const News = () => {
+
+const Headlinenews = () => {
   const navigate = useNavigate();
   const [articles, setArticles] = useState([]);
 
@@ -26,6 +27,11 @@ const News = () => {
         className="text-start link-dark link-offset-3-hover link-underline 
          link-underline-opacity-0 link-underline-opacity-75-hover"
       >
+         <img
+          src={'app/javascript/img/news_image.jpg'}
+        //   alt={`${article.headline} image`}
+          className="m-2 rounded float-start"
+        />
         {article.headline}
       </Link>
       <hr />
@@ -44,7 +50,7 @@ const News = () => {
     <>
       <br />
       <Card className="">
-        <Card.Header>News</Card.Header>
+        {/* <Card.Header>News</Card.Header> */}
         <Card.Body>
           {/* <Card.Title>Secondary Element</Card.Title> */}
           {articles.length > 0 ? (
@@ -60,4 +66,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Headlinenews;

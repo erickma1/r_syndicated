@@ -25,6 +25,7 @@
     "webpack-cli": "3.3.12"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack-dev-server": "3"
   }
 }
