@@ -14,7 +14,7 @@ const Welcome = () => {
         <Appbar />
       
       <Row>
-      <Col sm={8}><Mainpage />
+      <Col sm={12}><Mainpage />
       {/* <Link
             to="/articles"
             className="btn btn-primary"
@@ -24,7 +24,8 @@ const Welcome = () => {
           </Link> */}
       
       </Col>
-      <Col sm={4}><Sidebar /></Col>
+      {/* <Col sm={4}><Sidebar /></Col>
+      <Col sm={3}><Sidebar /></Col> */}
     </Row>
     </Container>
   );

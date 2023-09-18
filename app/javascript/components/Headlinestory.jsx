@@ -28,7 +28,7 @@ const Headlinestory = () => {
 
   return (
     <div className="">
-      <Card className="border-0">
+      <Card className="">
         {/* <Card.Header>News</Card.Header> */}
         <Card.Body>
         <Link
@@ -39,7 +39,7 @@ const Headlinestory = () => {
         <h5 className="mb-2">{article.headline}</h5>
       </Link>
 
-      <div className="float-left">
+      <div className="">
         <img
           src={article.image}
           alt={`${article.headline} image`}
