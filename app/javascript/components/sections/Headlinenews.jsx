@@ -21,7 +21,7 @@ const Headlinenews = () => {
   }, [navigate]);
 
   const allArticles = articles.map((article) => (
-    <div key={article.id} className="lh-base">
+    <div key={article.id} className="">
       <Link
         to={`/article/${article.id}`}
         className="text-start link-dark link-offset-3-hover link-underline 
@@ -49,7 +49,7 @@ const Headlinenews = () => {
   return (
     <>
       <br />
-      <Card className="">
+      <Card style={{ backgroundColor: '#ffffff', backgroundSize: 'cover', color: 'black', borderRadius: 0, border: 0 }}>
         {/* <Card.Header>News</Card.Header> */}
         <Card.Body>
           {/* <Card.Title>Secondary Element</Card.Title> */}
