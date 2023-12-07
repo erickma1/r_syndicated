@@ -28,7 +28,7 @@ const Headlinestory = () => {
 
   return (
     <div className="">
-      <Card className="">
+      <Card  style={{ backgroundColor: '#ffffff', backgroundSize: 'cover', color: 'black', borderRadius: 0, border: 0 }}>
         {/* <Card.Header>News</Card.Header> */}
         <Card.Body>
         <Link
@@ -39,11 +39,11 @@ const Headlinestory = () => {
         <h5 className="mb-2">{article.headline}</h5>
       </Link>
 
-      <div className="">
+      <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
         <img
           src={article.image}
           alt={`${article.headline} image`}
-          className="m-2 rounded float-start"
+          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
         <div className="text-start">
           <div

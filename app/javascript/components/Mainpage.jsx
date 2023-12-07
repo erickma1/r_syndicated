@@ -11,9 +11,9 @@ import Headlinenews from "./sections/Headlinenews";
 function Mainpage() {
   return (
     <>
-      <Container className="border border-primary">
+      <Container className="">
         <Row>
-          <Col sm={5}>
+          <Col sm={5} style={{ backgroundColor: '#eeeeee', color: '#ffffff'}}>
             <Headlinestory />
             {/* <Link
             to="/articles"
@@ -23,10 +23,10 @@ function Mainpage() {
             View Article
           </Link> */}
           </Col>
-          <Col sm={4}>
+          <Col sm={4} style={{ backgroundColor: '#eeeeee', color: '#ffffff'}}>
             <Headlinenews />
           </Col>
-          <Col sm={3}>
+          <Col sm={3} style={{ backgroundColor: '#eeeeee', color: '#ffffff'}}>
             <Sidebar />
           </Col>
         </Row>
