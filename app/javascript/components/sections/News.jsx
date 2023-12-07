@@ -43,7 +43,7 @@ const News = () => {
   return (
     <>
       <br />
-      <Card className="">
+      <Card style={{ backgroundColor: '#ffffff', backgroundSize: 'cover', color: 'black', borderRadius: 0, border: 0 }}>
         <Card.Header>News</Card.Header>
         <Card.Body>
           {/* <Card.Title>Secondary Element</Card.Title> */}
