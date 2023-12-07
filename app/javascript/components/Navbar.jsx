@@ -3,17 +3,18 @@ import { Navbar, Nav, Container } from 'react-bootstrap'; // Note the change her
 
 const MyNavbar = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar expand="lg" style={{ backgroundColor: '#546e7a', color: '#ffffff'}}>
       <Container>
         <Navbar.Brand href="#">SyndicatedNews</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#" active>
+            <Nav.Link style={{color: '#ffffff'}}href="#" active>
               Home
             </Nav.Link>
-            <Nav.Link href="#">Page 1</Nav.Link>
-            <Nav.Link href="#">Page 2</Nav.Link>
+            <Nav.Link style={{color: '#ffffff', fontSize: '13px'}} href="#">Page 1</Nav.Link>
+            <Nav.Link style={{color: '#ffffff'}} href="#">Page 2</Nav.Link>
+            <Nav.Link style={{color: '#ffffff'}} href="#">Page 3</Nav.Link>
           </Nav>
           <form class="d-flex" role="search">
             <input
