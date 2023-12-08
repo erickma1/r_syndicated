@@ -1,58 +1,66 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import Card from "react-bootstrap/Card";
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 
 const Headlinestory = () => {
   const params = useParams();
   const navigate = useNavigate();
-  const [article, setArticle] = useState({ main_text: "" });
+  const [article, setArticle] = useState({ main_text: '' });
 
   useEffect(() => {
-    const url = "/api/v1/max_id/";
+    const url = '/api/v1/max_id/';
     fetch(url)
       .then((response) => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Network response was not ok.");
+        throw new Error('Network response was not ok.');
       })
       .then((response) => setArticle(response))
-      .catch(() => navigate("/articles"));
+      .catch(() => navigate('/articles'));
   }, [params.id]);
 
   const addHtmlEntities = (str) => {
-    return String(str).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+    return String(str).replace(/&lt;/g, '<').replace(/&gt;/g, '>');
   };
 
   const articlemain_text = addHtmlEntities(article.main_text);
 
   return (
     <div className="">
-      <Card  style={{ backgroundColor: '#ffffff', backgroundSize: 'cover', color: 'black', borderRadius: 0, border: 0 }}>
+      <Card
+        style={{
+          backgroundColor: '#ffffff',
+          backgroundSize: 'cover',
+          color: 'black',
+          borderRadius: 0,
+          border: 0,
+        }}
+      >
         {/* <Card.Header>News</Card.Header> */}
         <Card.Body>
-        <Link
-        className="link-dark offset-2 link-offset-3-hover link-underline 
+          <Link
+            className="link-dark offset-2 link-offset-3-hover link-underline 
          link-underline-opacity-0 link-underline-opacity-75-hover"
-        to={`/article/${article.id}`}
-      >
-        <h5 className="mb-2">{article.headline}</h5>
-      </Link>
+            to={`/article/${article.id}`}
+          >
+            <h5 className="mb-2">{article.headline}</h5>
+          </Link>
 
-      <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
-        <img
-          src={article.image}
-          alt={`${article.headline} image`}
-          style={{ width: '100%', height: 'auto', display: 'block' }}
-        />
-        <div className="text-start">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${articlemain_text}`,
-            }}
-          />
-        </div>
-      </div>
+          <div style={{ maxWidth: '100%', overflow: 'hidden' }}>
+            <img
+              src={article.image}
+              alt={`${article.headline} image`}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+            <div className="text-start">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: `${articlemain_text}`,
+                }}
+              />
+            </div>
+          </div>
         </Card.Body>
       </Card>
     </div>
