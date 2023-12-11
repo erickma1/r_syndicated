@@ -6,6 +6,11 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def news
+    articles = Article.where(section: 1).order(created_at: :desc).limit(3)
+    render json: articles
+  end
+
+  def mostread
     articles = Article.where(section: 1).order(created_at: :desc).limit(5)
     render json: articles
   end
