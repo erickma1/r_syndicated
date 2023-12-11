@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 
-const Headlinenews = () => {
+const Frontpicstory = () => {
   const navigate = useNavigate();
   const [articles, setArticles] = useState([]);
 
@@ -18,58 +18,41 @@ const Headlinenews = () => {
       .then((res) => setArticles(res))
       .catch(() => navigate('/'));
   }, [navigate]);
+  
 
   const allArticles = articles.map((article) => (
     <div className="row" key={article.id}>
-      <div className="col-md-5">
+      <div className="col-md-3">
         <Link
           to={`/article/${article.id}`}
           className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
         >
           <img
             src={article.image}
-            style={{ borderRadius: '8px', width: '100%', height: 'auto', margin: '0px, 0px, 10px, 0px', marginBottom: '15px' }}
+            style={{ width: '100%', margin: '0px, 0px, 3px, 0px', height: 'auto' }}
             className="img-fluid"
             alt={article.headline}
           />
         </Link>
       </div>
 
-      <div className="col-md-7">
+      <div className="col-md-9">
         <Link
           to={`/article/${article.id}`}
-          style={{ fontSize: '17px', fontWeight: '700', display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
+          style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
           className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
         >
           <div style={{}}>{article.headline}</div>
-        </Link>
-        <Link
-          to={`/article/${article.id}`}
-          style={{ fontSize: '15px', fontWeight: '400', display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
-          className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-        >
-          <div style={{}}>{article.main_text}</div>
         </Link>
       </div>
 
-      {/* <div className="col-md-3">
-        <Link
-          to={`/article/${article.id}`}
-          style={{ fontSize: '7px', display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: ''}}
-          className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-        >
-          <div style={{}}>{article.headline}</div>
-        </Link>
-      </div> */}
-
+      <hr />
     </div>
   ));
 
   const noArticles = (
     <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
-      <h4>
-        Loading...
-      </h4>
+      Loading...
     </div>
   );
 
@@ -82,10 +65,9 @@ const Headlinenews = () => {
           backgroundSize: 'cover',
           color: 'black',
           border: 0,
-          padding: '0 0 0 0',
-          margin: '0 0 0 0',
         }}
       >
+        
         <Card.Body>
           {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
         </Card.Body>
@@ -95,4 +77,4 @@ const Headlinenews = () => {
   );
 };
 
-export default Headlinenews;
+export default Frontpicstory;

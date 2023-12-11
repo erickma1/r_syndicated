@@ -9,7 +9,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Welcome = () => {
+  const pageStyles = {
+    maxWidth: '1500px', // Set your desired maximum width
+    margin: '0 auto',   // Center the content horizontally
+    padding: '',     // Add padding for spacing
+  };
   return (
+    <div style={pageStyles}>
     <Container>
         <Appbar />
       
@@ -18,6 +24,8 @@ const Welcome = () => {
       </Col>
     </Row>
     </Container>
+  </div>
+    
   );
 };
 

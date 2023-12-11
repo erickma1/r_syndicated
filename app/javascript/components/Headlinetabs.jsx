@@ -3,11 +3,9 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import News from "./sections/News";
-import Frontpicstory from './sections/Frontpicstory'
+import Headlinenews from "./sections/Headlinenews";
 
-
-function Sidebar() {
+function Headlinetabs() {
   return (
     <Card
     style={{
@@ -20,17 +18,10 @@ function Sidebar() {
     }}
   >
     <Card.Body>
-    <Row>
-      <Col sm={6} style={{ color: '#ffffff'}}>
-        <Frontpicstory />
-      </Col>
-      <Col sm={6} style={{ color: '#ffffff'}}>
-        <News />
-      </Col>
-    </Row>
+      <Headlinenews />
     </Card.Body>
     </Card>
   );
 }
 
-export default Sidebar;
+export default Headlinetabs;
