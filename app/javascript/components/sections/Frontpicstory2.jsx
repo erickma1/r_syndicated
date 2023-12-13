@@ -85,7 +85,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 // import Headlinetabs from './Headlinetabs';
 
-const Frontpicstory = () => {
+const Frontpicstory2 = () => {
   const params = useParams();
   const navigate = useNavigate();
   const [article, setArticle] = useState({ main_text: '' });
@@ -177,4 +177,4 @@ const Frontpicstory = () => {
   );
 };
 
-export default Frontpicstory;
+export default Frontpicstory2;

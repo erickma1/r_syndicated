@@ -5,7 +5,8 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import News from "./sections/News";
 import Frontpicstory from './sections/Frontpicstory'
-
+import Frontpicstory2 from './sections/Frontpicstory2'
+import Featured from './sections/Featured'
 
 function Sidebar() {
   return (
@@ -23,11 +24,14 @@ function Sidebar() {
     <Row>
       <Col sm={6} style={{ color: '#ffffff'}}>
         <Frontpicstory />
+        <br />
+        <Frontpicstory2 />
       </Col>
       <Col sm={6} style={{ color: '#ffffff'}}>
         <News />
       </Col>
     </Row>
+    <Featured />
     </Card.Body>
     </Card>
   );

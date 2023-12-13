@@ -4,7 +4,10 @@ Rails.application.routes.draw do
       get 'articles/index'
       get 'articles/news'
       get 'articles/mostread'
+      get 'articles/feature'
+      get 'articles/world'
       post 'article/create'
+      
       get '/show/:id', to: 'articles#show'
       get '/max_id/', to: 'articles#max_id'
       # delete '/destroy/:id', to: 'article#destroy'

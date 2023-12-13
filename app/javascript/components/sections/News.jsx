@@ -21,17 +21,7 @@ const News = () => {
 
   const allArticles = articles.map((article) => (
     <div className="row" key={article.id}>
-      <div className="col-md-7">
-      <Link
-      style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
-        to={`/article/${article.id}`}
-        className="text-start link-dark link-offset-3-hover link-underline 
-         link-underline-opacity-0 link-underline-opacity-75-hover"
-      >
-        {article.headline}
-      </Link>
-
-        </div>
+      
 
         <div className="col-md-5">
         <Link
@@ -45,6 +35,18 @@ const News = () => {
             alt={article.headline}
           />
         </Link>
+        </div>
+        <div className="col-md-7">
+      <Link
+      style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
+        to={`/article/${article.id}`}
+        className="text-start link-dark link-offset-3-hover link-underline 
+         link-underline-opacity-0 link-underline-opacity-75-hover"
+      >
+        {article.headline}
+      </Link>
+
+        
 
 
         </div>

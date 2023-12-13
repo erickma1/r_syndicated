@@ -10,8 +10,18 @@ class Api::V1::ArticlesController < ApplicationController
     render json: articles
   end
 
+  def world
+    articles = Article.where(section: 1).order(created_at: :desc).limit(1)
+    render json: articles
+  end
+
   def mostread
     articles = Article.where(section: 1).order(created_at: :desc).limit(5)
+    render json: articles
+  end
+
+  def feature
+    articles = Article.where(section: 1).order(created_at: :desc).limit(2)
     render json: articles
   end
 
