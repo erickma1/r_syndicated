@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Sidebar from './Sidebar';
 import Container from 'react-bootstrap/Container';
 import Headlinetabs from './Headlinetabs';
+import Headlinenews from './sections/Headlinenews';
 
 function Mainpage() {
   return (
@@ -15,21 +16,19 @@ function Mainpage() {
         <Col
           sm={6}
           style={{
-            backgroundColor: '#eeeeee',
             color: '#ffffff',
-            padding: '25px 15px 25px 10px',
+            padding: '25px 0 25px 0',
           }}
         >
           <Headlinestory />
-          <Headlinetabs />
+          <Headlinenews />
          
         </Col>
         <Col
           sm={6}
           style={{
-            backgroundColor: '#eeeeee',
             color: '#ffffff',
-            padding: '25px 10px 25px 0',
+            padding: '25px 0 25px 0',
           }}
         >
           <Sidebar />
