@@ -28,7 +28,7 @@ const Headlinenews = () => {
         >
           <img
             src={article.image}
-            style={{ borderRadius: '8px', width: '100%', height: 'auto', margin: '0px, 0px, 10px, 0px', marginBottom: '15px' }}
+            style={{ width: '100%', height: 'auto', margin: '0px, 0px, 10px, 0px', marginBottom: '15px' }}
             className="img-fluid"
             alt={article.headline}
           />
@@ -76,7 +76,8 @@ const Headlinenews = () => {
   return (
     <>
       <br />
-      <Card
+      {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
+      {/* <Card
         style={{
           backgroundColor: '#ffffff',
           backgroundSize: 'cover',
@@ -89,7 +90,7 @@ const Headlinenews = () => {
         <Card.Body>
           {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
         </Card.Body>
-      </Card>
+      </Card> */}
       <br />
     </>
   );
