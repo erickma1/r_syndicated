@@ -15,7 +15,7 @@ function Sidebar() {
       backgroundColor: '#ffffff',
       backgroundSize: 'cover',
       color: 'black',
-      borderRadius: '8px',
+      // borderRadius: '8px',
       // boxShadow: '5px 5px 5px #aaaaaa',
       border: 0,
     }}
