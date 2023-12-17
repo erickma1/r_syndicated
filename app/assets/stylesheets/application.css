@@ -1,0 +1,19 @@
+.link {
+  /* linkOffset: '2-hover', */
+  /* linkUnderlineOpacity: '75-hover', */
+  color: black;  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #00f; /* Change text color on hover */
+  }
+}
+
+.custom-line {
+  border: 1px solid #ccc; /* Customize the line color, width, and style */
+}
