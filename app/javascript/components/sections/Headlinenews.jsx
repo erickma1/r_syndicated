@@ -29,7 +29,7 @@ const Headlinenews = () => {
         >
           <img
             src={article.image}
-            className="headline-image img-fluid"
+            className="headline-news-image img-fluid"
             alt={article.headline}
           />
         </a>
@@ -40,7 +40,7 @@ const Headlinenews = () => {
           href={`/article/${article.id}`}
           className="link-headline-header line-clamp-2"
         >
-          <div style={{}}>{article.headline}</div>
+          <div>{article.headline}</div>
         </a>
         <a
           href={`/article/${article.id}`}
