@@ -1,9 +1,6 @@
-.link {
-  /* linkOffset: '2-hover', */
-  /* linkUnderlineOpacity: '75-hover', */
+.link-news {
   color: black;  
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: ellipsis;
@@ -14,6 +11,60 @@
   }
 }
 
+.link-headline-header {
+  color: black;  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #00f; /* Change text color on hover */
+  }
+}
+
+.link-headline-news {
+  color: black;  
+  display: -webkit-box;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  &:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #00f; /* Change text color on hover */
+  }
+}
+
+.headline-image {
+  width: 100%;
+  height: auto;
+  margin: 0px, 0px, 10px, 0px;
+  margin-bottom: 15px;
+
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}
+
 .custom-line {
   border: 1px solid #ccc; /* Customize the line color, width, and style */
+}
+
+.centered-container {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
