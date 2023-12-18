@@ -24,7 +24,7 @@ const News = () => {
     <div key={article.id}>
       <a
         href={`/article/${article.id}`}
-        className="link"
+        className="link-news line-clamp-2"
       >
         {article.headline}
       </a>
@@ -33,7 +33,7 @@ const News = () => {
   ));
 
   const noArticles = (
-    <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
+    <div className="centered-container">
       Loading...
     </div>
   );

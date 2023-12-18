@@ -59,14 +59,9 @@ const Headlinestory = () => {
       
 
       <Card>
-     
-          {/* <Link
-            className="link-dark offset-2 link-offset-3-hover link-underline 
-         link-underline-opacity-0 link-underline-opacity-75-hover"
-            to={`/article/${article.id}`}
-          > */}
+
         <Card.Img variant="top" src={article.image} alt="Your Image" style={{ width: '100%',  display: 'block', height: '300px' }} />
-        {/* </Link> */}
+  
         <Link
             className="link-dark offset-2 link-offset-3-hover link-underline 
          link-underline-opacity-0 link-underline-opacity-75-hover"
@@ -81,11 +76,7 @@ const Headlinestory = () => {
         
         
         <Card.Body>
-       
-          {/* <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text> */}
+
         </Card.Body>
         </Link>
       </Card>
