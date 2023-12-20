@@ -58,7 +58,7 @@
 }
 
 .custom-line {
-  border: 1px solid #ccc; /* Customize the line color, width, and style */
+  border: 1.5px solid #ccc; /* Customize the line color, width, and style */
 }
 
 .centered-container {
@@ -74,19 +74,26 @@
   max-width: 100%;
 }
 
-.headline-text-style {
+.image-text-style {
   position: absolute;
   left: 10%;
   bottom: 1%;
   transform: translate(-10%, -10%);
   color: white;
-  font-size: 24px;
-  /* font-family: 'Source Sans Pro, sans-serif' !important; */
-  font-weight: 700;
   &:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #00f; /* Change text color on hover */
 }
+}
+
+.headline-text-font {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.frontpic-text-font {
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .overlay-style {
@@ -102,7 +109,7 @@
 .headline-news-image {
   width: 100%;
   display: block;
-  height: 300px;
+  /* height: 300px; */
   margin-bottom: 10px;
   transition: opacity 0.3s ease; /* Add a smooth transition effect */
   &:hover {
