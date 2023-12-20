@@ -109,7 +109,6 @@
 .headline-news-image {
   width: 100%;
   display: block;
-  /* height: 300px; */
   margin-bottom: 10px;
   transition: opacity 0.3s ease; /* Add a smooth transition effect */
   &:hover {
