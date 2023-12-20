@@ -1,10 +1,11 @@
 .link-news {
-  color: black;  
+  color: black;
   display: -webkit-box;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #00f; /* Change text color on hover */
@@ -12,14 +13,15 @@
 }
 
 .link-headline-header {
-  color: black;  
+  color: black;
   display: -webkit-box;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
   font-size: 17px;
   font-weight: 700;
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #00f; /* Change text color on hover */
@@ -27,14 +29,15 @@
 }
 
 .link-headline-news {
-  color: black;  
+  color: black;
   display: -webkit-box;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #00f; /* Change text color on hover */
@@ -44,9 +47,8 @@
 .headline-image {
   width: 100%;
   height: auto;
-  margin: 0px, 0px, 10px, 0px;
+  margin: 0, 0, 10px, 0;
   margin-bottom: 15px;
-
 }
 
 .line-clamp-2 {
@@ -80,10 +82,11 @@
   bottom: 1%;
   transform: translate(-10%, -10%);
   color: white;
+
   &:hover {
     text-decoration: underline; /* Add underline on hover */
     color: #00f; /* Change text color on hover */
-}
+  }
 }
 
 .headline-text-font {
