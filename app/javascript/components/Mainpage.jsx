@@ -21,7 +21,6 @@ function Mainpage() {
           }}
         >
           <Headlinestory />
-          <br /> <br />
           <Headlinenews />
          
         </Col>

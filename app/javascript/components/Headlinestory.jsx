@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Headlinetabs from './Headlinetabs';
+import '../../assets/stylesheets/application.css';
 
 const Headlinestory = () => {
   const params = useParams();
@@ -35,14 +36,13 @@ const Headlinestory = () => {
           src={article.image}
           alt="Your Image"
           className=""
-          // style={{ width: '100%', display: 'block', height: '300px' }}
         />
 
         <a className="" href={`/article/${article.id}`}>
           <Card.ImgOverlay>
             <div className="overlay-style">
               <Card.Title>
-                <div className="headline-text-style">{article.headline}</div>
+                <div className="image-text-style headline-text-font">{article.headline}</div>
               </Card.Title>
             </div>
           </Card.ImgOverlay>
