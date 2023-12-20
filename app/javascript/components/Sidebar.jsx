@@ -15,8 +15,6 @@ function Sidebar() {
       backgroundColor: '#ffffff',
       backgroundSize: 'cover',
       color: 'black',
-      // borderRadius: '8px',
-      // boxShadow: '5px 5px 5px #aaaaaa',
       border: 0,
     }}
   >
@@ -24,7 +22,7 @@ function Sidebar() {
     <Row>
       <Col sm={6} style={{ color: '#ffffff'}}>
         <Frontpicstory />
-        <br />
+       
         <Frontpicstory2 />
       </Col>
       <Col sm={6} style={{ color: '#ffffff'}}>
