@@ -60,7 +60,7 @@ const Headlinenews = () => {
 
   return (
     <>
-      <br />
+      
       {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
       <br />
     </>
