@@ -71,5 +71,4 @@ class Api::V1::ArticlesController < ApplicationController
   def article
     @article ||= Article.find(params[:id])
   end
-
 end
