@@ -42,19 +42,12 @@ const Africa = () => {
 
      
         <Link
-          to={`/article/${article.id}`}
-          style={{ fontSize: '17px', fontWeight: '700', display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2', textOverflow: 'ellipsis', overflow: 'hidden'}}
-          className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-        >
-          <div style={{}}>{article.headline}</div>
-        </Link>
-        <Link
-          to={`/article/${article.id}`}
-          style={{ fontSize: '15px', fontWeight: '400', display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '3', textOverflow: 'ellipsis', overflow: 'hidden'}}
-          className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-        >
-          <div style={{}}>{article.main_text}</div>
-        </Link>
+        to={`/article/${article.id}`}
+        className="link-section-headline line-clamp-3"
+      >
+        <div style={{}}>{article.headline}</div>
+      </Link>
+      <br />
       </div>
 
    
