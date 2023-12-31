@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
+import '../../../assets/stylesheets/application.css'; 
 
 const World = () => {
   const navigate = useNavigate();
@@ -19,35 +20,42 @@ const World = () => {
       .catch(() => navigate('/'));
   }, [navigate]);
 
-  const containerStyle = {
-    height: '30px',
-    width: '5px',
-    backgroundColor: 'red',
-    marginBottom: '5px',
-  };
+  // const containerStyle = {
+  //   height: '30px',
+  //   width: '5px',
+  //   backgroundColor: 'red',
+  //   marginBottom: '5px',
+  // };
 
-  const textStyle = {
-    position: 'absolute',
-    // Adjust the vertical position as needed
-    left: '10%', // Adjust the horizontal position as needed
-    bottom: '1%',
-    transform: 'translate(-10%, -10%)', // Center the text within the container
-    color: 'black', // Text color
-    fontSize: '17px', // Adjust the font size as needed
-    fontFamily: 'Source Sans Pro, sans-serif !important',
-    fontWeight: '700',
-  };
+  // const textStyle = {
+  //   // position: 'absolute',
+  //   // // Adjust the vertical position as needed
+  //   // left: '10%', // Adjust the horizontal position as needed
+  //   // bottom: '1%',
+  //   // transform: 'translate(-10%, -10%)', // Center the text within the container
+  //   // color: 'black', // Text color
+  //   // fontSize: '17px', // Adjust the font size as needed
+  //   // fontFamily: 'Source Sans Pro, sans-serif !important',
+  //   // fontWeight: '700',
+  //   borderLeft: '7px solid red',
+  //   height: '20px',
+  //   color: 'black',
+  //   fontSize: '17px', // Adjust the font size as needed
+  //   fontFamily: 'Source Sans Pro, sans-serif !important',
+  //   fontWeight: '700',
+  //   marginBottom: '5px',
+  //   paddingLeft: '8px',
+  //   paddingBottom: '5px', // Adjust this value to align the bottom of the text and border
+  //   lineHeight: '20px', // Adjust this value to align the text vertically
+  
+
+  // };
 
   const allArticles = articles.map((article) => (
     <div className="" key={article.id}>
-      {/* <div className="row">
-        <div className="col-md-2" style={containerStyle}>World News</div>
 
-        <div className="col-md-7"></div>
-      </div> */}
-      {/* <div className="" style={containerStyle}></div> */}
-      <div className="col-md-2" style={containerStyle}>
-        World News
+      <div className="section-headline-world">
+        WORLD NEWS
       </div>
 
       <Link

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
+import '../../../assets/stylesheets/application.css'; 
 
 const Africa = () => {
   const navigate = useNavigate();
@@ -21,6 +22,10 @@ const Africa = () => {
 
   const allArticles = articles.map((article) => (
     <div className="" key={article.id}>
+
+<div className="section-headline-africa">
+        AFRICA NEWS
+      </div>
       
         <Link
           to={`/article/${article.id}`}
