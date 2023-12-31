@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import '../../../assets/stylesheets/application.css'; 
@@ -19,37 +20,6 @@ const World = () => {
       .then((res) => setArticles(res))
       .catch(() => navigate('/'));
   }, [navigate]);
-
-  // const containerStyle = {
-  //   height: '30px',
-  //   width: '5px',
-  //   backgroundColor: 'red',
-  //   marginBottom: '5px',
-  // };
-
-  // const textStyle = {
-  //   // position: 'absolute',
-  //   // // Adjust the vertical position as needed
-  //   // left: '10%', // Adjust the horizontal position as needed
-  //   // bottom: '1%',
-  //   // transform: 'translate(-10%, -10%)', // Center the text within the container
-  //   // color: 'black', // Text color
-  //   // fontSize: '17px', // Adjust the font size as needed
-  //   // fontFamily: 'Source Sans Pro, sans-serif !important',
-  //   // fontWeight: '700',
-  //   borderLeft: '7px solid red',
-  //   height: '20px',
-  //   color: 'black',
-  //   fontSize: '17px', // Adjust the font size as needed
-  //   fontFamily: 'Source Sans Pro, sans-serif !important',
-  //   fontWeight: '700',
-  //   marginBottom: '5px',
-  //   paddingLeft: '8px',
-  //   paddingBottom: '5px', // Adjust this value to align the bottom of the text and border
-  //   lineHeight: '20px', // Adjust this value to align the text vertically
-  
-
-  // };
 
   const allArticles = articles.map((article) => (
     <div className="" key={article.id}>
@@ -77,35 +47,13 @@ const World = () => {
 
       <Link
         to={`/article/${article.id}`}
-        style={{
-          fontSize: '17px',
-          fontWeight: '700',
-          display: '-webkit-box',
-          WebkitBoxOrient: 'vertical',
-          WebkitLineClamp: '2',
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-        }}
-        className="text-start link-dark link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+        className="link-section-headline line-clamp-3"
       >
         <div style={{}}>{article.headline}</div>
       </Link>
-      <Link
-        to={`/article/${article.id}`}
-        style={{
-          fontSize: '15px',
-          fontWeight: '400',
-          display: '-webkit-box',
-          WebkitBoxOrient: 'vertical',
-          WebkitLineClamp: '3',
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-        }}
-        className="text-start link-dark link-offset-2-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-      >
-        <div style={{}}>{article.main_text}</div>
-      </Link>
+      <br />
     </div>
+    
   ));
 
   const noArticles = (
