@@ -4,7 +4,8 @@ import Card from 'react-bootstrap/Card';
 import Frontpicstory from './Frontpicstory';
 import World from './World';
 import Africa from './Africa';
-
+import Technology from './Technology';
+import Business from './Business';
 
 const Featured = () => {
   const navigate = useNavigate();
@@ -70,10 +71,10 @@ const Featured = () => {
       </div>
       <div className="row mt-2">
         <div className="col-md-6">
-        <Frontpicstory />
+        <Technology />
         </div>
         <div className="col-md-6">
-        <Frontpicstory />
+        <Business />
         </div>
       </div>
     </div>
