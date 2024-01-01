@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import '../../../assets/stylesheets/application.css'; 
+import '../../../assets/stylesheets/application.css';
 
 const World = () => {
   const navigate = useNavigate();
@@ -23,10 +23,7 @@ const World = () => {
 
   const allArticles = articles.map((article) => (
     <div className="" key={article.id}>
-
-      <div className="section-headline-world">
-        WORLD NEWS
-      </div>
+      <div className="section-headline-world">WORLD NEWS</div>
 
       <Link
         to={`/article/${article.id}`}
@@ -53,7 +50,6 @@ const World = () => {
       </Link>
       <br />
     </div>
-    
   ));
 
   const noArticles = (

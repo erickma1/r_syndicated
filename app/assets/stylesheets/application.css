@@ -8,7 +8,7 @@
 
   &:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #00f; /* Change text color on hover */
+    color: gray; /* Change text color on hover */
   }
 }
 
@@ -24,7 +24,7 @@
 
   &:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #00f; /* Change text color on hover */
+    color: gray; /* Change text color on hover */
   }
 }
 
@@ -40,7 +40,7 @@
 
   &:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #00f; /* Change text color on hover */
+    color: gray; /* Change text color on hover */
   }
 }
 
@@ -56,7 +56,7 @@
 
   &:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #00f; /* Change text color on hover */
+    color: gray; /* Change text color on hover */
   }
 }
 
@@ -101,7 +101,7 @@
 
   &:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #00f; /* Change text color on hover */
+    color: gray; /* Change text color on hover */
   }
 }
 
