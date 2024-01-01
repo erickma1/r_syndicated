@@ -60,7 +60,8 @@ const Headlinenews = () => {
 
   return (
     <>
-      
+      <div className="section-headline-world">MORE NEWS</div>
+      <br />
       {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
       <br />
     </>
