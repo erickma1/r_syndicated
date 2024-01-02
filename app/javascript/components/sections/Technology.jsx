@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import '../../../assets/stylesheets/application.css'; 
@@ -8,7 +9,7 @@ const Technology = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    const url = '/api/v1/articles/world';
+    const url = '/api/v1/articles/tech';
     fetch(url)
       .then((res) => {
         if (res.ok) {
@@ -33,7 +34,7 @@ const Technology = () => {
         >
           <img
             src={article.image}
-            style={{ width: '100%', height: 'auto', margin: '0px, 0px, 10px, 0px', marginBottom: '15px' }}
+            style={{ width: '100%', height: '170px', margin: '0px, 0px, 10px, 0px', marginBottom: '15px' }}
             className="img-fluid"
             alt={article.headline}
           />
