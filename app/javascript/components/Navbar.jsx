@@ -1,20 +1,26 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap'; // Note the change here
+import '../../assets/stylesheets/application.css';
 
 const MyNavbar = () => {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: '#546e7a', color: '#ffffff'}}>
+    <Navbar expand="lg" className="navbar">
       <Container>
-        <Navbar.Brand href="#">SyndicatedNews</Navbar.Brand>
+        <Navbar.Brand href="#">Syndicated</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link style={{color: '#ffffff'}}href="#" active>
+            <Nav.Link href="#" active>
               Home
             </Nav.Link>
-            <Nav.Link style={{color: '#ffffff', fontSize: '13px'}} href="#">Page 1</Nav.Link>
-            <Nav.Link style={{color: '#ffffff'}} href="#">Page 2</Nav.Link>
-            <Nav.Link style={{color: '#ffffff'}} href="#">Page 3</Nav.Link>
+            <Nav.Link href="#">News</Nav.Link>
+            <Nav.Link href="#">Politics</Nav.Link>
+            <Nav.Link href="#">Business</Nav.Link>
+            <Nav.Link href="#">Entertainment</Nav.Link>
+            <Nav.Link href="#">Tech</Nav.Link>
+            <Nav.Link href="#">Sports</Nav.Link>
+            <Nav.Link href="#">World</Nav.Link>
+            <Nav.Link href="#">Africa</Nav.Link>
           </Nav>
           <form class="d-flex" role="search">
             <input
