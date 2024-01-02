@@ -11,7 +11,22 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def world
-    articles = Article.where(section: 1).order(created_at: :desc).limit(1)
+    articles = Article.where(section: 5).order(created_at: :desc).limit(1)
+    render json: articles
+  end
+
+  def africa
+    articles = Article.where(section: 6).order(created_at: :desc).limit(1)
+    render json: articles
+  end
+
+  def tech
+    articles = Article.where(section: 7).order(created_at: :desc).limit(1)
+    render json: articles
+  end
+
+  def business
+    articles = Article.where(section: 8).order(created_at: :desc).limit(1)
     render json: articles
   end
 

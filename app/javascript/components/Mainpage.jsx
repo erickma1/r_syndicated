@@ -8,9 +8,11 @@ import Sidebar from './Sidebar';
 import Container from 'react-bootstrap/Container';
 import Headlinetabs from './Headlinetabs';
 import Headlinenews from './sections/Headlinenews';
+import Footer from './sections/Footer';
 
 function Mainpage() {
   return (
+    <>
     <Container className="">
       <Row>
         <Col
@@ -34,10 +36,10 @@ function Mainpage() {
           <Sidebar />
         </Col>
       </Row>
-      <div style={{ backgroundColor: '#eeeeee', color: '#black' }}>
-        Footer stating cats are CUTE little animals
-      </div>
+     
     </Container>
+    <Footer />
+    </>
   );
 }
 

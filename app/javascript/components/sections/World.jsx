@@ -33,7 +33,7 @@ const World = () => {
           src={article.image}
           style={{
             width: '100%',
-            height: 'auto',
+            height: '170px',
             margin: '0, 0, 10px, 0',
             marginBottom: '15px',
           }}
