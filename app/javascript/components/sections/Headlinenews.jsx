@@ -31,6 +31,12 @@ const Headlinenews = () => {
             src={article.image}
             className="headline-news-image img-fluid"
             alt={article.headline}
+            style={{
+              width: '100%',
+              height: '150px',
+              margin: '0, 0, 10px, 0',
+              marginBottom: '15px',
+            }}
           />
         </a>
       </div>
@@ -58,9 +64,14 @@ const Headlinenews = () => {
     </div>
   );
 
+  const more = (
+    <div className="section-headline-world">MORE HEADLINE NEWS</div>
+
+  );
+
   return (
     <>
-      <div className="section-headline-world">MORE NEWS</div>
+      <div>{more}</div>
       <br />
       {articles.length > 0 ? <div>{allArticles}</div> : noArticles}
       <br />
