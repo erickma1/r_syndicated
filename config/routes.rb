@@ -6,7 +6,11 @@ Rails.application.routes.draw do
       get 'articles/mostread'
       get 'articles/feature'
       get 'articles/world'
+      get 'articles/africa'
+      get 'articles/tech'
+      get 'articles/business'
       post 'article/create'
+      
       
       get '/show/:id', to: 'articles#show'
       get '/max_id/', to: 'articles#max_id'
