@@ -60,7 +60,7 @@ const Headlinenews = () => {
 
   const noArticles = (
     <div className="centered-container">
-      <h4>Loading...</h4>
+      Loading...
     </div>
   );
 
