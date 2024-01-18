@@ -53,9 +53,9 @@ const World = () => {
   ));
 
   const noArticles = (
-    <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
-      <h4>Loading...</h4>
-    </div>
+    <div className="centered-container">
+    Loading...
+  </div>
   );
 
   return <>{articles.length > 0 ? <div>{allArticles}</div> : noArticles}</>;
