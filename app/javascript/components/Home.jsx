@@ -29,8 +29,4 @@ const Welcome = () => {
   );
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Welcome />, document.getElementById("welcome"));
-});
-
 export default Welcome;
